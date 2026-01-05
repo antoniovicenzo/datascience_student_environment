@@ -1,0 +1,101 @@
+{
+  "name": "Advanced Data Structures and Storage Student Environment",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  
+  // Configure tool-specific properties
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Python & Jupyter
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "ms-toolsai.vscode-jupyter-powertoys",
+        "ms-toolsai.vscode-jupyter-renderers",
+        "ms-toolsai.datawrangler",
+        
+        // Remote Development
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        
+        // Databases
+        "mongodb.mongodb-vscode",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg",
+        "evidence.sqltools-duckdb-driver",
+        "cweijan.vscode-redis-client",
+        "neo4j.neo4j",
+        "alexcvzz.vscode-sqlite",
+        "qwtel.sqlite-viewer",
+        
+        // Data Formats & Visualization
+        "mechatroner.rainbow-csv",
+        "janisdd.vscode-edit-csv",
+        "randomfractalsinc.vscode-data-preview",
+        "tintinweb.graphviz-interactive-preview",
+        
+        // Azure Cloud
+        "ms-azuretools.vscode-azurestorage",
+        "ms-azuretools.vscode-azurefunctions",
+        
+        // Code Quality & Productivity
+        "github.copilot",
+        "github.copilot-chat",
+        "donjayamanne.python-environment-manager",
+        "kevinrose.vsc-python-indent",
+        "njpwerner.autodocstring",
+        "littlefoxteam.vscode-python-test-adapter",
+        
+        // Configuration & Utilities
+        "redhat.vscode-yaml",
+        "tamasfe.even-better-toml",
+        "hediet.vscode-drawio",
+        "mhutchie.git-graph"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+        "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+        "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+        "python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+        "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+        "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+        "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+        "python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+        "python.linting.pylintPath": "/usr/local/py-utils/bin/pylint"
+      }
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally
+  "forwardPorts": [9092, 8888],
+
+  // Use 'postCreateCommand' to run commands after the container is created
+  "postCreateCommand": "python --version && pip list",
+
+  // Set environment variables
+  "remoteEnv": {
+    "JAVA_HOME": "/usr/lib/jvm/default-java"
+  },
+
+  // Configure tool-specific features
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest",
+      "moby": false,
+      "dockerDashComposeVersion": "v2"
+    }
+  },
+
+  // Comment out to connect as root instead
+  "remoteUser": "vscode"
+}

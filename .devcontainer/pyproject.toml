@@ -1,0 +1,44 @@
+[project]
+name = "adss-student-environment"
+version = "1.0.0"
+description = "Advanced Data Structures and Storage Student Environment"
+requires-python = ">=3.11"
+dependencies = [
+    "pyspark",
+    "fastavro",
+    "Faker",
+    "pydicom",
+    "pyzmq",
+    "azure-storage-queue",
+    "confluent-kafka",
+    "azure-eventhub",
+    "azure-storage-blob",
+    "azure-data-tables",
+    "azure-storage-file-share",
+    "azure-storage-file",
+    "pandas",
+    "numpy",
+    "scipy",
+    "pyarrow",
+    "kafka-python",
+    "polars",
+    "matplotlib",
+    "plotly",
+    "Pillow",
+    "scikit-learn",
+    "scikit-image",
+    "schwifty",
+    "pymilvus",
+    "milvus[client]",
+    "redis",
+    "pymongo",
+    "networkx",
+    "pygraphviz",
+    "nxviz",
+    "neo4j",
+    "dnspython",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

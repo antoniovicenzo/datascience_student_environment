@@ -1,0 +1,15 @@
+# Python dependencies for Stream Analytics course
+pyspark
+fastavro
+Faker
+pydicom
+pyzmq
+azure-storage-queue
+confluent-kafka
+azure-eventhub
+azure-storage-blob
+pandas
+numpy
+pyarrow
+kafka-python
+polars
