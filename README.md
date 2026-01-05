@@ -1,4 +1,4 @@
-# AData Science Student Environment
+# Data Science Student Environment
 
 This repository provides a pre-configured GitHub Codespaces environment for courses and projects involving data structures, storage systems, and distributed computing. It includes all necessary dependencies and tools for working with Python, PySpark, Kafka, databases (MongoDB, Redis, Neo4j, Cassandra), Azure services, and data processing libraries.
 
