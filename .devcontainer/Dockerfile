@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/python:3.11
+FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
 
 # Install base OS packages
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
